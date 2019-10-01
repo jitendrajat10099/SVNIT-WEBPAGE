@@ -1,0 +1,169 @@
+
+<html>
+	<head>
+	<title>myCSS</title>
+	<style>
+		*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		}
+		.header{
+			height: 20vh;
+			width: 100%;
+			background-color: rgb(30, 60, 60);
+			color: white;
+			padding-top: 40px;
+			line-height: 40px;	
+		}
+		.image{
+			float : left;
+			width: 100px;
+			height: 100px;
+			margin-left : 2%;
+			margin-right: 10%;
+			margin-top: -40px;
+			/* check this image may vary */
+		}
+		.heading{
+			float: left;
+			widows: 100px;
+			height: 100px;
+		}
+		.left{
+			float: left;
+			width: 20%;
+			height: 70vh;
+			background-color: rgb(99, 39, 39);
+			text-align: center;
+			padding-top: 30px;
+		}
+		.texts{
+				background-color: rgb(221, 221, 221);
+				height: 30px;
+				margin: 10px;
+				line-height: 40px;
+				height : 40px;
+				border-left: 20px solid gray;
+		}
+		.texts:hover{
+			cursor: pointer;
+		}
+		.center{
+			background: repeating-linear-gradient(
+  			135deg, #fff, #fff 8px,  #d6d6d6 5px,  #d6d6d6 10px
+			);
+			float: left;
+			width: 60%;
+			height: 70vh;
+			background-color: white;
+			padding : 30px;
+		}
+		.right{
+			float: left;
+			width: 20%;
+			height: 70vh;
+			background-color: rgb(153, 153, 153);
+			padding-top: 40px;
+		}
+		.text1{
+			background-color: gray ;
+			color : white;
+			font-size : 20px;
+			margin: 40px 15px 40px 15px;
+			padding: 20px;
+			text-align: center;
+			line-height: 40px;
+		}
+		.main::after{
+			content: "";
+			clear : both; 
+			display : block;
+
+		}
+		.footer{
+			height: 10vh;
+			width: 100%;
+			background-color: rgb(54, 71, 13);
+			color: white;
+			font-size : 25px;
+			padding-top: 20px;
+		}
+		
+	</style>
+	<head>
+	<body>
+	
+	<div class="header" >
+	<div class="image"><img src="./Capture.PNG" width="150px" height="150px"></div>
+	<div lass="heading"><h1 >Lab 4: Positioning with CSS</h1>
+	<p >Brought to you by bingo!! and fog</p></div>
+	</div>
+		<div class="main">
+			<div class="left">
+				<div class="texts" id="a1">CWU Home</div>
+				<div class="texts" id="a2">CS Dept</div>
+				<div class="texts" id="a3">CS 250</div>
+			</div>
+			<div class="center" >
+					<h1>HELLO WORLD!!</h1>
+			</div>
+			<div class="right" >
+					<div class="text1">Advertisement 1<br> Buy me</div>
+					<div class="text1">Advertisement 2 <br> Buy me too</div>
+					
+					
+			</div>
+		</div>
+	<div class="footer" >
+		<center>CS 250, Fall 2011</center>
+	</div>
+	</body>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+	<script>
+	  $("#a1").click(function(){
+ 
+ $(".center").html(
+			`<h1>Welcome</h1>
+					<br>
+				<p style="font-size : 20px;">Welcome to Central Washington University! We're a public, four-year university
+				located in Ellensburg, Wash. No longer Washington's best-kept secret, we're now the state's fastest 
+				growing school of this type.
+				<br>
+				<br>
+				Central is recogized for outstading academics, small classes and an ideal 
+				location just east of the beautiful Cascade mountains, two hours from Seattle.
+				<br>
+				<br>
+				Elite academics, personal attention and a superb location all makes Central a popular first-choice school among college applicatios.
+				Come explore Central Washington University, and see why your future is Central.</p>`
+			   );
+			});
+
+		$('#a2').click(function(){
+			$(".center").html(`<h1> CSS4 is coming soon!!! </h1> 
+			<br>
+			Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media
+			<br> 
+			<p style="text-align : right;">source-w3c</p>`);
+		});
+		$('#a3').click(function(){
+			$(".center").html(`<h1> React is 3x faster than vanilla javascript's DOM rendering !!! </h1> 
+			<br> 
+			React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications, as it is optimal for fetching rapidly changing data that needs to be recorded. 
+			<br>
+			<br>
+			<lable>For more information : </lable><a  href="https://reactjs.org/" target="_blank">Click here</a>
+			<br>
+			<br>
+			<br>
+			<p style="text-align : right;">source-Wikipedia</p>`);
+		});
+		
+
+
+	</script>
+</html>
